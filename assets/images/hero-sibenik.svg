@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Ilustracija panorame Šibenika">
+  <defs>
+    <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe3e0"/>
+      <stop offset="55%" stop-color="#e9f3f0"/>
+      <stop offset="100%" stop-color="#f5f1e8"/>
+    </linearGradient>
+    <linearGradient id="heroSea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f8f8a"/>
+      <stop offset="100%" stop-color="#1f6f6b"/>
+    </linearGradient>
+    <linearGradient id="heroStone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#efe7d6"/>
+      <stop offset="100%" stop-color="#d8cdb6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#heroSky)"/>
+  <circle cx="1280" cy="190" r="90" fill="#f7efd9" opacity="0.85"/>
+  <!-- distant hills -->
+  <path d="M0 470 Q 300 400 600 460 T 1200 450 T 1600 470 V900 H0 Z" fill="#cdd9cf" opacity="0.7"/>
+  <!-- town rooftops -->
+  <g fill="url(#heroStone)" stroke="#c7b894" stroke-width="2">
+    <rect x="120" y="500" width="90" height="120"/>
+    <rect x="230" y="520" width="70" height="100"/>
+    <rect x="320" y="480" width="110" height="140"/>
+    <rect x="450" y="520" width="80" height="100"/>
+    <rect x="560" y="495" width="100" height="125"/>
+    <rect x="690" y="515" width="75" height="105"/>
+    <rect x="800" y="485" width="120" height="135"/>
+    <rect x="950" y="520" width="80" height="100"/>
+    <rect x="1060" y="500" width="100" height="120"/>
+    <rect x="1190" y="520" width="80" height="100"/>
+    <rect x="1300" y="495" width="110" height="125"/>
+    <rect x="1440" y="520" width="80" height="100"/>
+  </g>
+  <!-- cathedral dome silhouette -->
+  <g fill="#cdbf9f" stroke="#b9a87f" stroke-width="2">
+    <rect x="700" y="430" width="140" height="190"/>
+    <path d="M700 430 Q770 360 840 430 Z"/>
+    <rect x="765" y="320" width="10" height="60"/>
+  </g>
+  <!-- sea -->
+  <rect x="0" y="620" width="1600" height="280" fill="url(#heroSea)"/>
+  <g stroke="#7fc0bb" stroke-width="3" opacity="0.5" fill="none">
+    <path d="M0 690 q 80 -16 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0"/>
+    <path d="M0 760 q 80 -16 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0 t 160 0"/>
+  </g>
+  <text x="800" y="840" font-family="Georgia, 'Times New Roman', serif" font-size="40" fill="#f5f1e8" text-anchor="middle" opacity="0.95">Skriveni Šibenik</text>
+</svg>

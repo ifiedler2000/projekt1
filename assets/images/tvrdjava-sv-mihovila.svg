@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Ilustracija tvrđave svetog Mihovila">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe5e2"/>
+      <stop offset="100%" stop-color="#efe7d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg1)"/>
+  <!-- hill -->
+  <path d="M0 430 Q 200 360 400 400 T 800 410 V600 H0 Z" fill="#c7d3c8" opacity="0.7"/>
+  <!-- fortress walls -->
+  <g fill="#e3d8bf" stroke="#bda87d" stroke-width="3">
+    <rect x="220" y="250" width="360" height="180"/>
+    <rect x="220" y="230" width="40" height="30"/>
+    <rect x="300" y="230" width="40" height="30"/>
+    <rect x="380" y="230" width="40" height="30"/>
+    <rect x="460" y="230" width="40" height="30"/>
+    <rect x="540" y="230" width="40" height="30"/>
+    <rect x="180" y="290" width="60" height="140"/>
+    <rect x="560" y="290" width="60" height="140"/>
+  </g>
+  <rect x="380" y="340" width="40" height="90" fill="#bda87d"/>
+  <text x="400" y="520" font-family="Georgia, serif" font-size="30" fill="#3a3527" text-anchor="middle">Tvrđava sv. Mihovila</text>
+</svg>

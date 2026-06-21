@@ -1,0 +1,354 @@
+/* ============================================================
+   Skriveni Šibenik — styles.css
+   Mobile-first, responsive. Limestone/stone neutrals + Adriatic teal.
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --color-bg: #faf7f0;
+  --color-surface: #ffffff;
+  --color-stone-50: #f5f1e8;
+  --color-stone-100: #ede6d6;
+  --color-stone-200: #ddd3bd;
+  --color-text: #2c2a24;
+  --color-text-muted: #5c5749;
+  --color-teal: #1f7a74;
+  --color-teal-dark: #155a55;
+  --color-teal-light: #e1f0ee;
+  --color-border: #e3dccb;
+  --color-error: #b3261e;
+  --color-success: #1f7a4a;
+
+  /* Category accents */
+  --cat-povijest: #8a6d3b;
+  --cat-kultura: #7a4b73;
+  --cat-priroda: #2f8f5b;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Radii & shadow */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 2px 8px rgba(44, 42, 36, 0.08);
+  --shadow-lg: 0 8px 28px rgba(44, 42, 36, 0.12);
+
+  /* Typography */
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --maxw: 1100px;
+  --maxw-narrow: 680px;
+}
+
+/* ---------- Reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--color-teal-dark); }
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0 0 var(--space-3); }
+
+p { margin: 0 0 var(--space-3); }
+
+ul { margin: 0; }
+
+/* ---------- Accessibility helpers ---------- */
+.skip-link {
+  position: absolute;
+  left: var(--space-3);
+  top: -3rem;
+  background: var(--color-teal);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  z-index: 100;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: var(--space-3); }
+
+:focus-visible {
+  outline: 3px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+.container--narrow { max-width: var(--maxw-narrow); }
+
+section { padding-block: var(--space-7); }
+
+.section-title { font-size: clamp(1.6rem, 4vw, 2.25rem); }
+.section-lead { color: var(--color-text-muted); margin-bottom: var(--space-5); }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 247, 240, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.site-nav { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.site-nav a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.site-nav a:hover { color: var(--color-teal-dark); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+.btn--primary { background: var(--color-teal); color: #fff; }
+.btn--primary:hover { background: var(--color-teal-dark); }
+.btn--primary:active { transform: translateY(1px); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    linear-gradient(rgba(250, 247, 240, 0.55), rgba(250, 247, 240, 0.82)),
+    url("assets/images/hero-sibenik.svg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--color-border);
+}
+.hero__inner {
+  padding-block: var(--space-8);
+  max-width: 720px;
+}
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-teal-dark);
+  margin-bottom: var(--space-2);
+}
+.hero__title { font-size: clamp(2rem, 6vw, 3.25rem); }
+.hero__subtitle {
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  color: var(--color-text-muted);
+  max-width: 48ch;
+  margin-bottom: var(--space-5);
+}
+.hero__cta { font-size: 1.05rem; }
+
+/* ---------- Controls (filter + search) ---------- */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+.filters { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.filter-btn {
+  font: inherit;
+  font-weight: 500;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: all 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--color-teal); color: var(--color-teal-dark); }
+.filter-btn.is-active {
+  background: var(--color-teal);
+  border-color: var(--color-teal);
+  color: #fff;
+}
+
+.search { display: flex; flex-direction: column; gap: var(--space-1); }
+.search__label { font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); }
+.search__input {
+  font: inherit;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+}
+
+/* ---------- Cards grid ---------- */
+.cards {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.card[hidden] { display: none; }
+
+.card__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-stone-100);
+}
+.card__body { padding: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+.card__title { font-size: 1.25rem; margin: 0; }
+.card__desc { color: var(--color-text-muted); margin: 0; }
+.card__facts { padding-left: 1.1rem; color: var(--color-text); font-size: 0.92rem; }
+.card__facts li { margin-bottom: var(--space-1); }
+.card__link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-weight: 600;
+  color: var(--color-teal-dark);
+  text-decoration: none;
+  padding-top: var(--space-2);
+}
+.card__link:hover { text-decoration: underline; }
+
+/* Category badges */
+.badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: #fff;
+}
+.badge--povijest { background: var(--cat-povijest); }
+.badge--kultura  { background: var(--cat-kultura); }
+.badge--priroda  { background: var(--cat-priroda); }
+
+.no-results {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-6);
+  font-style: italic;
+}
+
+/* ---------- Contact form ---------- */
+.kontakt { background: var(--color-stone-50); }
+.form { display: flex; flex-direction: column; gap: var(--space-4); }
+.form__row { display: flex; flex-direction: column; gap: var(--space-1); }
+.form__label { font-weight: 600; font-size: 0.95rem; }
+.form__input {
+  font: inherit;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  width: 100%;
+}
+.form__input:invalid:not(:placeholder-shown) { border-color: var(--color-border); }
+.form__row.has-error .form__input { border-color: var(--color-error); }
+.form__error { color: var(--color-error); font-size: 0.85rem; min-height: 1.1em; }
+.form__success {
+  color: var(--color-success);
+  font-weight: 600;
+  background: #e9f6ee;
+  border: 1px solid #bfe3cd;
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+}
+
+/* ---------- Izvori ---------- */
+.izvori__list { padding-left: 1.2rem; color: var(--color-text-muted); margin-bottom: var(--space-4); }
+.izvori__list li { margin-bottom: var(--space-2); }
+.izvori__note { color: var(--color-text-muted); font-size: 0.92rem; }
+code {
+  background: var(--color-stone-100);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-text);
+  color: var(--color-stone-100);
+  padding-block: var(--space-6);
+}
+.site-footer a { color: var(--color-teal-light); }
+.site-footer__attr { color: var(--color-stone-200); font-size: 0.88rem; margin: 0; }
+.site-footer__inner p:first-child { margin-bottom: var(--space-1); }
+
+/* ============================================================
+   Responsive breakpoints
+   ============================================================ */
+@media (min-width: 600px) {
+  .controls { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+  .search { min-width: 280px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .hero__inner { padding-block: 5rem; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

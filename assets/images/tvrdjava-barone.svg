@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Ilustracija tvrđave Barone s pogledom na okolicu">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe5e2"/>
+      <stop offset="100%" stop-color="#e7efd9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg5)"/>
+  <!-- layered hills (the view) -->
+  <path d="M0 380 Q 200 320 400 360 T 800 350 V600 H0 Z" fill="#bcd1c2" opacity="0.6"/>
+  <path d="M0 440 Q 250 400 500 430 T 800 420 V600 H0 Z" fill="#a9c2af" opacity="0.6"/>
+  <!-- bastion -->
+  <g fill="#e3d8bf" stroke="#bda87d" stroke-width="3">
+    <path d="M250 300 L550 300 L590 430 L210 430 Z"/>
+    <rect x="250" y="280" width="40" height="24"/>
+    <rect x="330" y="280" width="40" height="24"/>
+    <rect x="410" y="280" width="40" height="24"/>
+    <rect x="490" y="280" width="40" height="24"/>
+  </g>
+  <!-- flag -->
+  <line x1="400" y1="280" x2="400" y2="210" stroke="#8c7b53" stroke-width="4"/>
+  <path d="M400 215 l40 12 l-40 12 Z" fill="#2f8f8a"/>
+  <text x="400" y="510" font-family="Georgia, serif" font-size="30" fill="#3a3527" text-anchor="middle">Tvrđava Barone</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Ilustracija detalja katedrale svetog Jakova">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d8e6e4"/>
+      <stop offset="100%" stop-color="#efe7d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  <!-- apse with dome -->
+  <g fill="#e7dcc4" stroke="#bda87d" stroke-width="3">
+    <rect x="280" y="280" width="240" height="200"/>
+    <path d="M280 280 Q400 170 520 280 Z"/>
+  </g>
+  <!-- frieze of small heads -->
+  <g fill="#a8966b">
+    <circle cx="305" cy="300" r="9"/>
+    <circle cx="335" cy="300" r="9"/>
+    <circle cx="365" cy="300" r="9"/>
+    <circle cx="395" cy="300" r="9"/>
+    <circle cx="425" cy="300" r="9"/>
+    <circle cx="455" cy="300" r="9"/>
+    <circle cx="485" cy="300" r="9"/>
+  </g>
+  <!-- rose window -->
+  <circle cx="400" cy="380" r="42" fill="#cbbf9f" stroke="#a8966b" stroke-width="3"/>
+  <g stroke="#efe7d6" stroke-width="3">
+    <line x1="358" y1="380" x2="442" y2="380"/>
+    <line x1="400" y1="338" x2="400" y2="422"/>
+    <line x1="370" y1="350" x2="430" y2="410"/>
+    <line x1="430" y1="350" x2="370" y2="410"/>
+  </g>
+  <rect x="200" y="240" width="20" height="12" fill="#bda87d"/>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="28" fill="#3a3527" text-anchor="middle">Katedrala sv. Jakova — detalji</text>
+</svg>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Skriveni Šibenik — vodič kroz manje poznata mjesta grada</title>
+  <meta name="description" content="Skriveni Šibenik vodi vas kroz manje poznate tvrđave, vrtove i šetnice grada Šibenika uz provjerene činjenice, savjete za posjet i poveznice na karte.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skriveni Šibenik — vodič kroz manje poznata mjesta grada">
+  <meta property="og:description" content="Vodič kroz manje poznate tvrđave, vrtove i šetnice Šibenika uz provjerene činjenice i poveznice na karte.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skriveni-sibenik.netlify.app">
+  <meta property="og:image" content="https://skriveni-sibenik.netlify.app/assets/images/hero-sibenik.svg">
+  <meta property="og:locale" content="hr_HR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Analytics 4 -->
+  <!-- TODO: zamijeniti G-XXXXXXXXXX stvarnim GA4 Measurement ID-om prije objave -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#vrh">Skriveni Šibenik</a>
+      <nav class="site-nav" aria-label="Glavna navigacija">
+        <a href="#lokacije">Lokacije</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#izvori">Izvori</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="glavni-sadrzaj">
+    <!-- HERO -->
+    <section class="hero" id="vrh">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Vodič kroz grad Šibenik</p>
+        <h1 class="hero__title">Otkrijte skrivena mjesta Šibenika</h1>
+        <p class="hero__subtitle">
+          Tvrđave, samostanski vrtovi i šetnice uz more koje turisti često
+          preskoče. Svaka lokacija dolazi s provjerenim činjenicama i poveznicom na kartu.
+        </p>
+        <a class="btn btn--primary hero__cta" id="hero-cta" href="#kontakt">Pošalji upit</a>
+      </div>
+    </section>
+
+    <!-- FILTER + SEARCH -->
+    <section class="lokacije" id="lokacije" aria-labelledby="lokacije-naslov">
+      <div class="container">
+        <h2 id="lokacije-naslov" class="section-title">Lokacije</h2>
+        <p class="section-lead">Filtrirajte po kategoriji ili pretražite po nazivu.</p>
+
+        <div class="controls">
+          <div class="filters" role="group" aria-label="Filtriranje po kategoriji">
+            <button type="button" class="filter-btn is-active" data-filter="sve" aria-pressed="true">Sve</button>
+            <button type="button" class="filter-btn" data-filter="povijest" aria-pressed="false">Povijest</button>
+            <button type="button" class="filter-btn" data-filter="kultura" aria-pressed="false">Kultura</button>
+            <button type="button" class="filter-btn" data-filter="priroda" aria-pressed="false">Priroda</button>
+          </div>
+          <div class="search">
+            <label class="search__label" for="search-input">Pretraži lokacije</label>
+            <input type="search" id="search-input" class="search__input" placeholder="npr. tvrđava, vrt, kanal…" autocomplete="off">
+          </div>
+        </div>
+
+        <ul class="cards" id="cards-grid">
+          <!-- POVIJEST 1 -->
+          <li class="card" data-category="povijest" data-search="tvrđava sv. mihovila srednjovjekovna utvrda ljetna pozornica povijest">
+            <img class="card__img" src="assets/images/tvrdjava-sv-mihovila.svg" alt="Ilustracija kamenih zidina tvrđave sv. Mihovila iznad grada" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--povijest">Povijest</span>
+              <h3 class="card__title">Tvrđava sv. Mihovila</h3>
+              <p class="card__desc">Srednjovjekovna utvrda na brijegu iznad starog grada koja se danas koristi kao ljetna pozornica na otvorenom.</p>
+              <ul class="card__facts">
+                <li>Najstariji sačuvani fortifikacijski sklop u gradu.</li>
+                <li>Obnovljena i otvorena kao prostor za koncerte i predstave.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=Tvr%C4%91ava+sv.+Mihovila+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+
+          <!-- POVIJEST 2 -->
+          <li class="card" data-category="povijest" data-search="gradski bunari četiri bunara povijesni vodospremnik cisterna povijest">
+            <img class="card__img" src="assets/images/gradski-bunari.svg" alt="Ilustracija četiri kamena grla bunara na popločanom trgu" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--povijest">Povijest</span>
+              <h3 class="card__title">Gradski bunari (Četiri bunara)</h3>
+              <p class="card__desc">Povijesni vodospremnik s nizom kamenih bunarskih grla koji je gradu osiguravao zalihe pitke vode.</p>
+              <ul class="card__facts">
+                <li>Sklop je izgrađen kao spremnik za vodu u 15. stoljeću.</li>
+                <li>Smješten je uz nekadašnji ulaz u grad, blizu tržnice.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=%C4%8Cetiri+bunara+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+
+          <!-- KULTURA 1 -->
+          <li class="card" data-category="kultura" data-search="katedrala sv. jakova unesco juraj dalmatinac friz glave kultura">
+            <img class="card__img" src="assets/images/katedrala-detalj.svg" alt="Ilustracija apside katedrale sv. Jakova s frizom glava i rozetom" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--kultura">Kultura</span>
+              <h3 class="card__title">Katedrala sv. Jakova — detalji</h3>
+              <p class="card__desc">Kamena katedrala na UNESCO-ovu popisu, poznata po frizu s nizom isklesanih ljudskih glava na vanjskim zidovima apsida.</p>
+              <ul class="card__facts">
+                <li>Gradnja je trajala od 1431. do 1535. godine.</li>
+                <li>Na popisu svjetske baštine UNESCO-a od 2000. godine.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=Katedrala+sv.+Jakova+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+
+          <!-- KULTURA 2 -->
+          <li class="card" data-category="kultura" data-search="srednjovjekovni mediteranski vrt sv. lovre samostan ljekovito bilje kultura">
+            <img class="card__img" src="assets/images/mediteranski-vrt.svg" alt="Ilustracija samostanskog vrta s nadsvođenim trijemom i gredicama bilja" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--kultura">Kultura</span>
+              <h3 class="card__title">Mediteranski vrt sv. Lovre</h3>
+              <p class="card__desc">Obnovljeni samostanski vrt uređen po uzoru na srednjovjekovne mediteranske vrtove, s ljekovitim i začinskim biljem.</p>
+              <ul class="card__facts">
+                <li>Smješten je uz samostan sv. Lovre u starom gradu.</li>
+                <li>Uređen je s gredicama bilja i nadsvođenim trijemom.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=Srednjovjekovni+mediteranski+vrt+sv.+Lovre+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+
+          <!-- PRIRODA 1 -->
+          <li class="card" data-category="priroda" data-search="tvrđava barone vidikovac pogled grad okolica priroda 1646">
+            <img class="card__img" src="assets/images/tvrdjava-barone.svg" alt="Ilustracija bastiona tvrđave Barone s pogledom na okolne brežuljke" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--priroda">Priroda</span>
+              <h3 class="card__title">Tvrđava Barone</h3>
+              <p class="card__desc">Utvrda iz 17. stoljeća na brežuljku koja pruža otvoren pogled na grad, kanal i okolni krajolik.</p>
+              <ul class="card__facts">
+                <li>Sagrađena 1646. godine za obranu grada.</li>
+                <li>Vidikovac s panoramom grada i zaleđa.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=Tvr%C4%91ava+Barone+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+
+          <!-- PRIRODA 2 -->
+          <li class="card" data-category="priroda" data-search="kanal sv. ante zaštićeni krajobraz šetnica more luka priroda">
+            <img class="card__img" src="assets/images/kanal-sv-ante.svg" alt="Ilustracija morskog kanala sv. Ante s obraslim obalama i šetnicom" width="800" height="600" loading="lazy">
+            <div class="card__body">
+              <span class="badge badge--priroda">Priroda</span>
+              <h3 class="card__title">Kanal sv. Ante</h3>
+              <p class="card__desc">Zaštićeni krajobraz na morskom ulazu u luku, s uređenom šetnicom uz obalu obraslu mediteranskim raslinjem.</p>
+              <ul class="card__facts">
+                <li>Proglašen zaštićenim krajobrazom zbog prirodnih vrijednosti.</li>
+                <li>Uz kanal vodi uređena pješačka šetnica.</li>
+              </ul>
+              <a class="card__link" href="https://www.google.com/maps/search/?api=1&query=Kanal+sv.+Ante+%C5%A0ibenik" target="_blank" rel="noopener">Otvori u kartama</a>
+            </div>
+          </li>
+        </ul>
+
+        <p class="no-results" id="no-results" hidden>Nijedna lokacija ne odgovara pretrazi.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="kontakt" id="kontakt" aria-labelledby="kontakt-naslov">
+      <div class="container container--narrow">
+        <h2 id="kontakt-naslov" class="section-title">Pošaljite upit</h2>
+        <p class="section-lead">Imate pitanje o lokacijama ili prijedlog? Javite nam se.</p>
+
+        <!--
+          Netlify Forms: atributi name, method="POST", data-netlify="true",
+          skriveni "form-name" input i honeypot polje rade tek nakon objave
+          stranice na Netlifyju. Lokalno ova forma neće slati podatke, ali JS
+          validacija radi svugdje.
+        -->
+        <form class="form" id="kontakt-form" name="kontakt" method="POST"
+              data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="kontakt">
+          <p class="form__hp" hidden>
+            <label>Ne ispunjavajte ovo polje: <input name="bot-field"></label>
+          </p>
+
+          <div class="form__row">
+            <label class="form__label" for="ime">Ime</label>
+            <input class="form__input" type="text" id="ime" name="ime" required autocomplete="name" aria-describedby="ime-error">
+            <span class="form__error" id="ime-error" role="alert"></span>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input" type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+            <span class="form__error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="poruka">Poruka</label>
+            <textarea class="form__input" id="poruka" name="poruka" rows="5" required aria-describedby="poruka-error"></textarea>
+            <span class="form__error" id="poruka-error" role="alert"></span>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Pošalji poruku</button>
+          <p class="form__success" id="form-success" role="status" hidden>Hvala! Vaša poruka je zabilježena.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CREDITS / IZVORI -->
+    <section class="izvori" id="izvori" aria-labelledby="izvori-naslov">
+      <div class="container container--narrow">
+        <h2 id="izvori-naslov" class="section-title">Izvori i zahvale</h2>
+        <p class="section-lead">
+          Sve slike na stranici su izvorne, ilustrativne SVG grafike izrađene za
+          ovaj projekt (nisu fotografije stvarnih lokacija). Činjenice o lokacijama
+          temelje se na izvorima navedenima u dokumentu <code>research-brief.md</code>.
+        </p>
+        <ul class="izvori__list">
+          <li>Wikipedija — natuknice o pojedinim lokacijama u Šibeniku.</li>
+          <li>Turistička zajednica grada Šibenika (sibenik-tourism.hr).</li>
+          <li>UNESCO — popis svjetske baštine (whc.unesco.org).</li>
+          <li>Hrvatska enciklopedija (Leksikografski zavod Miroslav Krleža).</li>
+        </ul>
+        <p class="izvori__note">Potpuna anotirana bibliografija s poveznicama nalazi se u <code>research-brief.md</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; 2026 Skriveni Šibenik — Ivana Fiedler (studentski projekt iz digitalne pismenosti).</p>
+      <p class="site-footer__attr">Sadržaj je informativan; ilustracije su izvorne. Izvori navedeni u sekciji Izvori.</p>
+    </div>
+  </footer>
+</body>
+</html>

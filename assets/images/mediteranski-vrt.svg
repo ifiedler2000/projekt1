@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Ilustracija srednjovjekovnog mediteranskog vrta svetog Lovre">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcebdf"/>
+      <stop offset="100%" stop-color="#eef0dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <!-- cloister arches -->
+  <g fill="#e7dcc4" stroke="#bda87d" stroke-width="3">
+    <path d="M120 360 v-90 a30 30 0 0 1 60 0 v90 Z"/>
+    <path d="M200 360 v-90 a30 30 0 0 1 60 0 v90 Z"/>
+    <path d="M280 360 v-90 a30 30 0 0 1 60 0 v90 Z"/>
+  </g>
+  <!-- garden beds -->
+  <g fill="#b9cf9a" stroke="#8aa86b" stroke-width="2">
+    <rect x="420" y="300" width="120" height="120" rx="8"/>
+    <rect x="560" y="300" width="120" height="120" rx="8"/>
+  </g>
+  <!-- herbs/trees -->
+  <g fill="#7aa15c">
+    <circle cx="470" cy="300" r="26"/>
+    <circle cx="510" cy="320" r="20"/>
+    <circle cx="610" cy="300" r="26"/>
+    <circle cx="650" cy="320" r="20"/>
+  </g>
+  <rect x="0" y="420" width="800" height="180" fill="#cdbf9c"/>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="26" fill="#3a3527" text-anchor="middle">Mediteranski vrt sv. Lovre</text>
+</svg>

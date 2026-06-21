@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Ilustracija kanala svetog Ante, šetnica uz more">
+  <defs>
+    <linearGradient id="bg6sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe8e5"/>
+      <stop offset="100%" stop-color="#eaf2ec"/>
+    </linearGradient>
+    <linearGradient id="bg6sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a9a94"/>
+      <stop offset="100%" stop-color="#247470"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg6sky)"/>
+  <!-- pine-covered banks -->
+  <path d="M0 300 Q 150 240 300 300 L300 420 L0 420 Z" fill="#8aa86b"/>
+  <path d="M800 300 Q 650 240 500 300 L500 420 L800 420 Z" fill="#7aa15c"/>
+  <!-- water channel -->
+  <rect x="0" y="380" width="800" height="220" fill="url(#bg6sea)"/>
+  <g stroke="#6fbdb7" stroke-width="3" opacity="0.5" fill="none">
+    <path d="M0 440 q 60 -12 120 0 t 120 0 t 120 0 t 120 0 t 120 0 t 120 0 t 120 0"/>
+    <path d="M0 500 q 60 -12 120 0 t 120 0 t 120 0 t 120 0 t 120 0 t 120 0 t 120 0"/>
+  </g>
+  <!-- pine trees -->
+  <g fill="#5f8a45">
+    <polygon points="120,300 150,360 90,360"/>
+    <polygon points="200,290 235,360 165,360"/>
+    <polygon points="650,300 680,360 620,360"/>
+    <polygon points="580,290 615,360 545,360"/>
+  </g>
+  <!-- small boat -->
+  <path d="M360 470 q40 30 80 0 Z" fill="#efe7d6" stroke="#a8966b" stroke-width="2"/>
+  <text x="400" y="560" font-family="Georgia, serif" font-size="30" fill="#f5f1e8" text-anchor="middle">Kanal sv. Ante</text>
+</svg>
