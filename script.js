@@ -166,23 +166,48 @@
       }
 
       /*
-        Valid form. We show a success message and fire the GA4 event.
-        We prevent the default submit so the demo gives instant feedback;
-        on Netlify you can remove preventDefault() to let Netlify Forms
-        capture the submission (the data-netlify attributes handle it).
+        Valid form → pošalji podatke Netlify Formsu preko fetch (AJAX).
+        Tako se submission STVARNO zabilježi na Netlifyju, a korisnik
+        ostaje na stranici i vidi poruku uspjeha.
+        VAŽNO: radi SAMO na objavljenoj Netlify stranici. Lokalno
+        (Live Preview / localhost) POST nema backend pa se izvrši catch() —
+        to je očekivano.
       */
       event.preventDefault();
 
       track("form_submit", { form: "kontakt" });
 
-      form.reset();
-      fields.forEach(function (field) {
-        setFieldError(field, "");
-      });
-      if (successMsg) {
-        successMsg.hidden = false;
-        successMsg.focus && successMsg.focus();
-      }
+      var submitBtn = form.querySelector('[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Serijaliziraj sva polja forme (uključuje i skriveni "form-name").
+      var body = new URLSearchParams(new FormData(form)).toString();
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          form.reset();
+          fields.forEach(function (field) {
+            setFieldError(field, "");
+          });
+          if (successMsg) {
+            successMsg.hidden = false;
+            successMsg.focus && successMsg.focus();
+          }
+        })
+        .catch(function () {
+          if (successMsg) successMsg.hidden = true;
+          window.alert(
+            "Slanje trenutno nije moguće. Napomena: obrazac radi tek na objavljenoj Netlify stranici, ne lokalno."
+          );
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 })();
